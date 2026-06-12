@@ -1,0 +1,311 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E CORES (Reset básico)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fontes modernas */
+    background-color: #121212; /* Plano de fundo escuro */
+    color: #f5f5f5; /* Cor do texto clara */
+    line-height: 1.6;
+}
+
+/* Estilo para links gerais */
+a {
+    color: #ff6b00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff8833; /* Efeito hover simples */
+}
+
+/* ==========================================================================
+   2. CABEÇALHO E MENU DE NAVEGAÇÃO (NAVBAR AJEITADA)
+   ========================================================================== */
+#menu-principal {
+    background-color: rgba(26, 26, 26, 0.95); /* Fundo escuro com leve transparência */
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco atrás da barra */
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ff6b00;
+    position: sticky; /* Mantém a barra fixa no topo ao rolar a página */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para separar o menu do conteúdo */
+}
+
+#menu-principal h1 {
+    font-size: 26px;
+    color: #ff6b00;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 107, 0, 0.3); /* Leve brilho neon no logo */
+}
+
+#menu-principal nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+#menu-principal nav ul li {
+    margin-left: 15px;
+}
+
+/* BOTÕES DA NAVBAR */
+#menu-principal nav ul li a {
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: inline-block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efeito Hover (Quando passa o mouse) */
+#menu-principal nav ul li a:hover {
+    background-color: #ff6b00;
+    color: #121212;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.5);
+    transform: translateY(-3px); /* Sobe um pouquinho para o efeito flutuante */
+}
+
+/* CLASSE ATIVO: Destaca o botão da página onde o usuário está */
+#menu-principal nav ul li a.ativo {
+    background-color: rgba(255, 107, 0, 0.15); /* Fundo laranja bem suave */
+    color: #ff6b00; /* Texto em laranja */
+    border: 1px solid #ff6b00; /* Borda laranja fina */
+    box-shadow: inset 0 0 8px rgba(255, 107, 0, 0.2); /* Sombra interna */
+}
+
+/* Efeito Hover nos botões da Navbar */
+#menu-principal nav ul li a:hover {
+    background-color: #ff6b00; /* Fundo laranja */
+    color: #121212; /* Letra escura para dar contraste */
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4); /* Brilho neon sutil */
+    transform: translateY(-2px); /* Efeito flutuante (sobe levemente) */
+}
+
+/* ==========================================================================
+   3. CONTEÚDO PRINCIPAL (Layout e Espaçamentos)
+   ========================================================================== */
+main {
+    max-width: 1000px;
+    margin: 40px auto; /* Centraliza o conteúdo na tela */
+    padding: 0 20px;
+}
+
+h2, h3 {
+    color: #ff6b00;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section {
+    background-color: #1a1a1a;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px; /* Bordas arredondadas modernas */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra suave */
+}
+
+/* Ênfases de texto */
+strong {
+    color: #ff6b00;
+}
+
+em {
+    color: #ffb300;
+}
+
+/* ==========================================================================
+   4. PÁGINA INICIAL E IMAGENS
+   ========================================================================== */
+.img-responsiva {
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid #333;
+}
+
+/* ==========================================================================
+   5. PÁGINA DO CARDÁPIO (Listas e Tabelas Estilizadas)
+   ========================================================================== */
+/* Lista de definição (Entradas) */
+#entradas dt {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+#entradas dd {
+    color: #bbb;
+    margin-left: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #333;
+    padding-bottom: 10px;
+}
+
+/* Tabela de Hambúrgueres */
+.tabela-cardapio {
+    width: 100%;
+    border-collapse: collapse; /* Junta as bordas da tabela */
+    margin: 20px 0;
+}
+
+.tabela-cardapio th, .tabela-cardapio td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.tabela-cardapio th {
+    background-color: #ff6b00;
+    color: #121212;
+    font-weight: bold;
+}
+
+.tabela-cardapio tr:hover {
+    background-color: #252525; /* Destaque ao passar o mouse na linha */
+}
+
+/* Destaque para item em promoção */
+.item-promocao {
+    background-color: rgba(255, 107, 0, 0.1);
+}
+
+/* Lista ordenada (Bebidas) */
+#bebidas ol {
+    margin-left: 20px;
+}
+
+#bebidas ol li {
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+/* ==========================================================================
+   6. PÁGINA DE GALERIA (Organização Visual)
+   ========================================================================== */
+.grade-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Organiza em colunas automáticas */
+    gap: 20px; /* Espaço entre as fotos */
+}
+
+.foto-item {
+    background-color: #252525;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.foto-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Faz a foto cortar certinho sem distorcer */
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+   7. PÁGINA DE CONTATO (Formulário Moderno)
+   ========================================================================== */
+#formulario-contato {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ff6b00;
+}
+
+.campo-form input, .campo-form textarea {
+    background-color: #252525;
+    border: 1px solid #333;
+    padding: 12px;
+    color: #fff;
+    border-radius: 4px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+/* Efeito de foco quando o usuário clica no campo */
+.campo-form input:focus, .campo-form textarea:focus {
+    border-color: #ff6b00;
+    outline: none;
+}
+
+/* BOTÃO DE ENVIAR ATUALIZADO (GRADIENTE E EFEITO DE CLIQUE REALISTA) */
+#botao-enviar {
+    background: linear-gradient(135deg, #ff6b00, #ff8833); /* Gradiente moderno */
+    color: #121212;
+    border: none;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 6px; /* Cantos levemente suavizados */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease; /* Transição veloz para resposta tátil rápida */
+}
+
+/* Hover do botão de envio */
+#botao-enviar:hover {
+    background: linear-gradient(135deg, #ff8833, #ffb300); /* Inverte o tom do gradiente */
+    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.5); /* Brilho neon expandido */
+    transform: translateY(-3px); /* Flutua um pouco mais alto */
+}
+
+/* Efeito ao CLICAR de verdade no botão (Sensação de afundar) */
+#botao-enviar:active {
+    transform: translateY(-1px); /* Quase encosta no chão de novo */
+    box-shadow: 0 2px 8px rgba(255, 107, 0, 0.2); /* Sombra diminui simulando pressão */
+}
+
+/* ==========================================================================
+   8. RODAPÉ (Footer)
+   ========================================================================== */
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+    font-size: 14px;
+    color: #777;
+}
+
+footer a {
+    font-weight: bold;
+}
